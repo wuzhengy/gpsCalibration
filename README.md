@@ -99,11 +99,9 @@ $ mkdir data
 ## About system input and output
 ### 1. Input
 #### 1.1 .bag
-##### 1.1.1 What is .bag?
 A bag is a file format in ROS for storing ROS message data.
  
 #### 1.2 GPS
-##### 1.2.1 GPS format
 The GPSRMC is protocol of GPSRMC's communication, and the format is that:
 $GPRMC,085223.136,A,3957.6286,N,11619.2078,E,0.06,36.81,180908,,,A\*57
 
@@ -114,13 +112,13 @@ You can find Google Earth here: https://developers.google.com/kml/?hl=en-US.*
 
 ### 3. Example
 #### 3.1 data download
-  point cloud data: http://www.imorpheus.ai/download/dataForDemo/bagDemo
-  PS data: http://www.imorpheus.ai/download/dataForDemo/original_gps_data
+#####  point cloud data: http://www.imorpheus.ai/download/dataForDemo/bagDemo
+#####  GPS data: http://www.imorpheus.ai/download/dataForDemo/original_gps_data
 
 #### 3.2 demo results
   http://www.imorpheus.ai/demo/
 
 ## Questions
   You can ask any question here or send us emails.
-  issue address: https://github.com/iMorpheusAI/gpsCalibration/issues
-  email adderss: product@imorpheus.ai
+###  issue address: https://github.com/iMorpheusAI/gpsCalibration/issues
+###  email adderss: product@imorpheus.ai
