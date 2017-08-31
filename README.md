@@ -114,13 +114,13 @@ You can find Google Earth here: https://developers.google.com/kml/?hl=en-US.*
 
 ### 3. Example
 #### 3.1 data download
-  point cloud data: http://www.imorpheus.ai/download/dataForDemo/bagDemo
-  GPS data: http://www.imorpheus.ai/download/dataForDemo/original_gps_data
+  *point cloud data: http://www.imorpheus.ai/download/dataForDemo/bagDemo*
+  *GPS data: http://www.imorpheus.ai/download/dataForDemo/original_gps_data*
 
 #### 3.2 demo results
   http://www.imorpheus.ai/demo/
 
 ## Questions
-You can ask any question here or send us emails.
-  issue address: https://github.com/iMorpheusAI/gpsCalibration/issues
-  email adderss: product@imorpheus.ai
+  *You can ask any question here or send us emails.*
+  *issue address: https://github.com/iMorpheusAI/gpsCalibration/issues*
+  *email adderss: product@imorpheus.ai*
