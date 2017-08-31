@@ -77,14 +77,14 @@ The final output is calibrated GPS track. We only work on 2D GPS tracks in this 
   sensor_msgs/PointCloud2. and GPS coordinates matched with your run trail although 
   GPS is not accurate and not continuous in time.
   If you don’t have lidar or GPS data, don’t worry, we have some data in advance for you to have a try.*
-  point cloud data: http://www.imorpheus.ai/download/dataForDemo/bagDemo
-  GPS data: http://www.imorpheus.ai/download/dataForDemo/original_gps_data
+#### point cloud data: http://www.imorpheus.ai/download/dataForDemo/bagDemo
+#### GPS data: http://www.imorpheus.ai/download/dataForDemo/original_gps_data
   
 
 2.*Open the globalConfig.py in directory "iMorpheusAI/"
   set needed file directory correctly.*
 
-3.*In directory "iMorpheusAI", run command *:
+3.*In directory "iMorpheusAI", run command :*
 
 ```
 $ catkin_make 
@@ -103,14 +103,14 @@ $ mkdir data
 A bag is a file format in ROS for storing ROS message data.
  
 #### 1.2 GPS
-##### 1.2.1 What is GPSRMC?
+##### 1.2.1 GPS format
 The GPSRMC is protocol of GPSRMC's communication, and the format is that:
-$GPRMC,085223.136,A,3957.6286,N,11619.2078,E,0.06,36.81,180908,,,A*57
+$GPRMC,085223.136,A,3957.6286,N,11619.2078,E,0.06,36.81,180908,,,A\*57
 
 ### 2. Output
-The results of the program are stored in */data*. We provide calibrated GPS in kml formats.
+*The results of the program are stored in /data. We provide calibrated GPS in kml formats.
 If you want to see GPS track in Google Earth, you need to use kml.
-You can find Google Earth here: https://developers.google.com/kml/?hl=en-US.
+You can find Google Earth here: https://developers.google.com/kml/?hl=en-US.*
 
 ### 3. Example
 #### 3.1 data download
