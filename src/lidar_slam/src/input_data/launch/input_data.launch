@@ -1,0 +1,7 @@
+<launch>
+<arg name="input_bag_file"/>
+<arg name="output_track_file"/>
+<arg name="total_distance"/>
+<arg name="overlap_distance"/>
+<node pkg="input_data" type="input_data_node" name="input_data_node" output="screen" required="true" args="$(arg input_bag_file) $(arg output_track_file) $(arg total_distance) $(arg overlap_distance)"/>
+</launch>

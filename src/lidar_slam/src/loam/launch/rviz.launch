@@ -1,0 +1,7 @@
+<launch>
+
+  <arg name="rviz" default="true" />
+  <group if="$(arg rviz)">
+    <node launch-prefix="xterm -e" pkg="rviz" type="rviz" name="rviz" args="-d $(find loam)/rviz_cfg/loam_velodyne.rviz" required="true"/>
+  </group>
+</launch>

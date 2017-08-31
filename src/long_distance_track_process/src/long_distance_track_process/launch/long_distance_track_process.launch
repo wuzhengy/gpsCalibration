@@ -1,0 +1,9 @@
+<launch>
+<arg name="loam_track_file"/>
+<arg name="gps_track_file"/>
+<arg name="gps_enu_file"/>
+<arg name="loam_enu_file"/>
+<arg name="icp_weight_file"/>
+<arg name="icp_type"/>
+<node pkg="long_distance_track_process" type="long_distance_track_process_node" name="long_distance_track_process" output="screen" args="$(arg loam_track_file) $(arg gps_track_file) $(arg gps_enu_file) $(arg loam_enu_file) $(arg icp_weight_file) $(arg icp_type)" required="true"/>
+</launch>

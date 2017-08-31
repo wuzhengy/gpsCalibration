@@ -1,0 +1,8 @@
+<launch>
+<arg name="coe_sort"/>
+<arg name="slam_track_file"/>
+<arg name="gps_track_file"/>
+<arg name="icp_track_file"/>
+<arg name="weight_coe_file"/>
+<node pkg="icp_weight_coe" type="icp_weight_coe_node" name="icp_weight_coe" output="screen" args="$(arg coe_sort) $(arg slam_track_file) $(arg gps_track_file) $(arg icp_track_file) $(arg weight_coe_file)" required="true" />
+</launch>

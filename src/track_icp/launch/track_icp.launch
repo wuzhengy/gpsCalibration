@@ -1,0 +1,8 @@
+<launch>
+<arg name="input_slamTrack_file"/>
+<arg name="input_gpsTrack_file"/>
+<arg name="input_weightCoe_file"/>
+<arg name="output_reTrack_file"/>
+<arg name="icp_type"/>
+<node pkg="track_icp" type="track_icp" name="track_icp" output="screen" required="true" args="$(arg input_slamTrack_file) $(arg input_gpsTrack_file) $(arg input_weightCoe_file) $(arg output_reTrack_file) $(arg icp_type)"/>
+</launch>

@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "valarray": "cpp",
+        "iostream": "cpp",
+        "*.tcc": "cpp",
+        "fstream": "cpp",
+        "sstream": "cpp",
+        "slist": "cpp",
+        "ostream": "cpp"
+    }
+}

@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(iMorpheusAI)
+
+
+include_directories(${PROJECT_SOURCE_DIR}/include )
+set(GPSToLocal_DIR_SRCS src/GPS_to_local.cpp)
+set(LocalToGPS_DIR_SRCS src/local_to_GPS.cpp)
+set(GPStoKML_DIR_SRCS src/create_KML.cpp ./config/kml_config.xml)
+set(EXCUTABLE_DIR ../../devel)
+link_directories("/usr/include/libxml2")
+set(EXECUTABLE_OUTPUT_PATH ${EXCUTABLE_DIR})
+add_executable(GPS_to_local ${GPSToLocal_DIR_SRCS})
+add_executable(local_to_GPS ${LocalToGPS_DIR_SRCS})
+add_executable(GPS_to_KML ${GPStoKML_DIR_SRCS})
+target_link_libraries(GPS_to_KML xml2)
+target_link_libraries(local_to_GPS xml2)
