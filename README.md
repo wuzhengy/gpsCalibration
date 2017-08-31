@@ -116,9 +116,9 @@ You can find Google Earth here: https://developers.google.com/kml/?hl=en-US.*
 #####  GPS data: http://www.imorpheus.ai/download/dataForDemo/original_gps_data
 
 #### 3.2 demo results
-  http://www.imorpheus.ai/demo/
+#####  http://www.imorpheus.ai/demo/
 
 ## Questions
   You can ask any question here or send us emails.
-###  issue address: https://github.com/iMorpheusAI/gpsCalibration/issues
-###  email adderss: product@imorpheus.ai
+#####  issue address: https://github.com/iMorpheusAI/gpsCalibration/issues
+#####  email adderss: product@imorpheus.ai
