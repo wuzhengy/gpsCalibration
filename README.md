@@ -89,6 +89,9 @@ The final output is calibrated GPS track. We only work on 2D GPS tracks in this 
 $ catkin_make 
 $ source setup.sh
 $ mkdir data
+$ cd data
+$ touch bag_list.txt
+  *add the point cloud data bag path*
 ```
 
 4.*Okay, you can run ./run.py.*
