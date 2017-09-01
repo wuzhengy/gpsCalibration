@@ -71,7 +71,7 @@ We use timestamped point set registration to match GPS and LOAM tracks in two st
 The final output is calibrated GPS track. We only work on 2D GPS tracks in this version. Altitudes are set to a constant for the purpose of demonstration in Google Earth.
 
 #### 1.4 Flowchart
-
+![image](https://github.com/iMorpheusAI/gpsCalibration/raw/master/demo/flowchart.jpg)
 ## How to compile and run the project
 1.*Make sure that you have the message bag. it includes follow message types
   sensor_msgs/PointCloud2. and GPS coordinates matched with your run trail although 
