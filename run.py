@@ -8,7 +8,7 @@ import globalConfig
 from subprocess import Popen
 
 if __name__=="__main__":
-    
+        
     #long distance loam
     command_loam="roslaunch input_data input_data.launch input_bag_file:="+\
                  globalConfig.bag_input_filename + " output_track_file:="+\
@@ -156,7 +156,7 @@ if __name__=="__main__":
     command_enu_to_gps= "./devel/local_to_GPS "+ globalConfig.enuProcessedFinal+ " "+\
                         globalConfig.ctm+ " "+\
                         globalConfig.gdt+ " "+\
-                        globalConfig.gpsProcessedFinal+ " "+ globalConfig.gps_improved_filename+ "; "
+                        "1"+ " "+ globalConfig.gps_improved_filename+ "; "
     print("command enu to gps is: ", command_enu_to_gps)
     pENUToGPS= Popen(command_enu_to_gps, shell= True)
     globalConfig.pidList[10]= pENUToGPS.pid

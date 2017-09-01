@@ -169,8 +169,8 @@ void calculateAverage(int flag, int startflag, int opNo, vector<Point> overlapBe
     coe1= 0.0;
     coe2= 0.0;
     smWindow= opNo/2;
-    cout<<"<---startNo--->"<< startNo<<" <---overlapnum--->"<<opNo<<endl;
-    cout<<"<---smWindow--->"<< smWindow<<endl;
+    //cout<<"<---startNo--->"<< startNo<<" <---overlapnum--->"<<opNo<<endl;
+    //cout<<"<---smWindow--->"<< smWindow<<endl;
     for(int i= startNo; i< startNo+ opNo; ++i)
     {
         //1st coe part
@@ -220,20 +220,17 @@ void calculateAverage(int flag, int startflag, int opNo, vector<Point> overlapBe
 //get lastfile total line count
 int getLastFileLine(int num)
 {
+    int len=0;
     char filename[IMLDLEN];
-    char* totalcount;
-    size_t len=0;
+    char buf[IMLDLEN];
     sprintf(filename,"%s_%d",gpsCalibrationTrack,num);
-    string temp=filename;
-    string command="wc -l "+temp;
-    FILE* pfile=popen(command.c_str(),"r");
-    int ret=getdelim(&totalcount,&len,' ',pfile);
-    pclose(pfile);
-    if(ret)
+    fstream ifile(filename,fstream::in);
+    while(ifile.getline(buf,IMLDLEN)) len++;
+    if(len)
     {
-        cout<<"----------->"<<totalcount<<endl;
+        cout<<"last file rows NO. "<<len<<endl;
     }
-    return atoi(totalcount);
+    return len;
 }
 //except first and last file ,other file segments have similar logical. 
 int mergeTrack(vector<int> flag,vector<int> overlap,vector<Point> overlapBefore,vector<Point> overlapBehind, string mergeOverlapFile)

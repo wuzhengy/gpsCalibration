@@ -33,7 +33,7 @@ int main(int argc,char** argv)
         int haveread=0;
         sprintf(ENUfileName,"%s_%d",gpsCalibrationTrack,i);
         track.open(ENUfileName,fstream::in);
-        std::cout<<"------------->"<<ENUfileName<<std::endl;
+        //std::cout<<"------------->"<<ENUfileName<<std::endl;
         assert(track !=0 );
         while(getline(track,str))
         {
