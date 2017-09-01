@@ -1,4 +1,4 @@
-﻿# iMopheus.ai
+# iMopheus.ai
 We are iMopheus.ai. We work on algorithm research and software development about calibration of GPS signal with various data sources.
 
 # gpsCalibration
@@ -54,9 +54,7 @@ LOAM, Laser Odometry and Mapping, is a real-time method for state estimation and
 
 The "odometry" thread computes motion of the lidar between two sweeps, at a higher frame rate. It also removes distortion in the point cloud caused by motion of the lidar. The "mapping" thread takes the undistorted point cloud and incrementally builds a map, while simultaneously computes pose of the lidar on the map at a lower frame rate. The lidar state estimation is combination of the outputs from the two threads.
 
-To learn more about LOAM, please refer to:
-http://wiki.ros.org/loam_velodyne
-http://www.frc.ri.cmu.edu/%7Ejizhang03/Publications/RSS_2014.pdf
+To learn more about LOAM, please refer to [paper](http://www.frc.ri.cmu.edu/%7Ejizhang03/Publications/RSS_2014.pdf).
 
 This package is a simple modified copy of loam_velodyne GitHub repository from laboshinl, which is again a modified copy of the original one release by Ji Zhang. His change on top of the original one is that he changed the scanRegistration.cpp to make it work with his dataset.
 
@@ -72,15 +70,15 @@ We use timestamped point set registration to match GPS and LOAM tracks in two st
 
 The final output is calibrated GPS track. We only work on 2D GPS tracks in this version. Altitudes are set to a constant for the purpose of demonstration in Google Earth.
 
+#### 1.4 Flowchart
+![image](https://github.com/iMorpheusAI/gpsCalibration/raw/master/demo/flowchart.jpg)
 ## How to compile and run the project
 1.*Make sure that you have the message bag. it includes follow message types
   sensor_msgs/PointCloud2. and GPS coordinates matched with your run trail although 
   GPS is not accurate and not continuous in time.
   If you don’t have lidar or GPS data, don’t worry, we have some data in advance for you to have a try.*
-#### point cloud data: http://www.imorpheus.ai/download/dataForDemo/bagDemo
-#### GPS data: http://www.imorpheus.ai/download/dataForDemo/original_gps_data
+* [point cloud data](http://www.imorpheus.ai/download/dataForDemo/bagDemo)
   
-
 2.*Open the globalConfig.py in directory "iMorpheusAI/"
   set needed file directory correctly.*
 
@@ -102,7 +100,7 @@ $ mkdir data
 A bag is a file format in ROS for storing ROS message data.
  
 #### 1.2 GPS
-The GPSRMC is protocol of GPSRMC's communication, and the format is that:
+The GPSRMC is protocol of GPSRMC's communication, and the format is:
 $GPRMC,085223.136,A,3957.6286,N,11619.2078,E,0.06,36.81,180908,,,A\*57
 
 ### 2. Output
@@ -112,13 +110,11 @@ You can find Google Earth here: https://developers.google.com/kml/?hl=en-US.*
 
 ### 3. Example
 #### 3.1 data download
-#####  point cloud data: http://www.imorpheus.ai/download/dataForDemo/bagDemo
-#####  GPS data: http://www.imorpheus.ai/download/dataForDemo/original_gps_data
+* [point cloud data](http://www.imorpheus.ai/download/dataForDemo/bagDemo)
+* [GPS data](http://www.imorpheus.ai/download/dataForDemo/original_gps_data)
 
 #### 3.2 demo results
-#####  http://www.imorpheus.ai/demo/
+http://www.imorpheus.ai/demo/
 
 ## Questions
-  You can ask any question here or send us emails.
-#####  issue address: https://github.com/iMorpheusAI/gpsCalibration/issues
-#####  email adderss: product@imorpheus.ai
+  You can ask any question [here](https://github.com/iMorpheusAI/gpsCalibration/issues) or send us [emails](product@imorpheus.ai).
