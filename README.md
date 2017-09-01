@@ -78,6 +78,7 @@ The final output is calibrated GPS track. We only work on 2D GPS tracks in this 
   GPS is not accurate and not continuous in time.
   If you don’t have lidar or GPS data, don’t worry, we have some data in advance for you to have a try.*
 * [point cloud data](http://www.imorpheus.ai/download/dataForDemo/bagDemo)
+* [GPS data](http://www.imorpheus.ai/download/dataForDemo/original_gps_data)
   
 2.*Open the globalConfig.py in directory "iMorpheusAI/"
   set needed file directory correctly.*
@@ -114,7 +115,9 @@ You can find Google Earth here: https://developers.google.com/kml/?hl=en-US.*
 * [GPS data](http://www.imorpheus.ai/download/dataForDemo/original_gps_data)
 
 #### 3.2 demo results
-http://www.imorpheus.ai/demo/
+![image](https://github.com/iMorpheusAI/gpsCalibration/raw/master/demo/demo1.jpg)
+![image](https://github.com/iMorpheusAI/gpsCalibration/raw/master/demo/demo2.jpg)
+##### [See More](http://www.imorpheus.ai/demo/)
 
 ## Questions
   You can ask any question [here](https://github.com/iMorpheusAI/gpsCalibration/issues) or send us [emails](product@imorpheus.ai).
