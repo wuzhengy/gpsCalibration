@@ -2,7 +2,7 @@
 We are iMopheus.ai. We work on algorithm research and software development about calibration of GPS signal with various data sources.
 
 # gpsCalibration
-![License](https://img.shields.io/badge/License-Apache 2.0-blue.svg)
+![License](https://img.shields.io/badge/License-Apache2.0-blue.svg)
 
 ## Purpose
 The gpsCalibration is a system that aims to provide real time high-precision GPS track. Our first version provides an off-line solution.
