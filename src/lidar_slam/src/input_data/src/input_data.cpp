@@ -127,7 +127,10 @@ int readBagList(char *fileName,vector<string> &bagList)
     char buf[IMSDLEN];
     while(ifile.getline(buf,IMSDLEN))
     {
-        bagList.push_back(buf);
+        if(strcmp("",buf))
+        {
+            bagList.push_back(buf);
+        }
     }
     ifile.close();
     return 0;
@@ -140,19 +143,28 @@ long totalMessageNumber(vector<string> bagList,vector<long> &messageNumber)
     long messageNumPerBag = 0;
 
     tempTopics.push_back("velodyne_points");
-
-    for(int index = 0;index < bagList.size();index ++)
+    
+    try
     {
-        messageNumPerBag = 0;        // message number per bag
-        readBag.open(bagList[index].c_str());
-        rosbag::View view(readBag,rosbag::TopicQuery(tempTopics));
-        foreach(rosbag::MessageInstance const m,view)
+        for(int index = 0;index < bagList.size();index ++)
         {
-            totalNum ++;
-            messageNumPerBag ++;
+            messageNumPerBag = 0;        // message number per bag
+            readBag.open(bagList[index].c_str());
+            rosbag::View view(readBag,rosbag::TopicQuery(tempTopics));
+            foreach(rosbag::MessageInstance const m,view)
+            {
+                totalNum ++;
+                messageNumPerBag ++;
+            }
+            readBag.close();
+            messageNumber.push_back(messageNumPerBag);
         }
-        readBag.close();
-        messageNumber.push_back(messageNumPerBag);
+        cout<<"total message is "<<totalNum<<endl;
+    }
+    catch(rosbag::BagIOException)
+    {
+        cout<<"cannot find bag path,please check bag_list"<<endl;
+        timetodie = 1;
     }
     return totalNum;
 }
@@ -202,16 +214,19 @@ int main(int argc, char **argv)
         printf("baglist.txt location not found\n");
         return 1;
     }
+
+    if(0 == bagList.size())
+    {
+        cout<<"baglist.txt is null."<<endl;
+        return 0;
+    }
+
     vector<long> messageNumber;
     long totalMessage = totalMessageNumber(bagList,messageNumber);
-    //long messageNumber = totalMessageNumber(bagList);
 
     long messageIndex = 0;
 
-    cout<<"total message is "<<totalMessage<<endl;
-
 	commandKill= "killall transformMaintenance; killall laserMapping; killall laserOdometry; killall scanRegistration;";     // kill loam
-    //std::cout <<"******* " << commandKill << std::endl;
     
     ros::NodeHandle nh;
     ros::Publisher pubLaserCloud = nh.advertise<sensor_msgs::PointCloud2>("/velodyne_points",1024);      // publish pointcloud message
@@ -399,11 +414,13 @@ int main(int argc, char **argv)
                 readBag.close();
             }
         }
+        sleep(1);
+        system(commandKill.c_str());     // kill loam
 
     }
 
-    sleep(1);
-    system(commandKill.c_str());    // kill loam
+    //sleep(1);
+    //system(commandKill.c_str());    // kill loam
 
     sleep(2);
     kill(child_pid,SIGKILL);    // kill child process
