@@ -1,5 +1,5 @@
 # iMorpheus.ai
-iMorpheus work on algorithm research and software development about calibration of GPS signal with various data sources.
+iMorpheus work on algorithm to calibration of GPS signal with various data sources.
 
 # gpsCalibration
 ![License](https://img.shields.io/badge/License-Apache2.0-blue.svg)
