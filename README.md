@@ -1,50 +1,50 @@
-# iMorpheus.ai
-iMorpheus work on algorithm to calibration of GPS signal with various data sources.
+# iMorpheus.ai - high availability sub-meter precise GPS
+Through algorithm fusion of multiple data sources from different sensors such as lidar, radar, camera, gps, imu and point cloud, iMorpheus.ai brings about an high availability precision GPS measurement to outdoor robotics developer. iMorpheus integrate a number of advanced algorithm such as slam, kalman filter, ICP, feature selection and Gaussian Process. We believe precise GPS signal should obtained by computing from cloud rather than measure the satellite. 
 
-# gpsCalibration
+## gpsCalibration copyrights
 ![License](https://img.shields.io/badge/License-Apache2.0-blue.svg)
 
-## Purpose
-The gpsCalibration is a system that aims to provide real time high-precision GPS track. Our first version provides an off-line solution.
+## Current Version - alpha
+The alpha version is a software package operate under off-line mode and using point clould and GPS to give you accurate GPS. Each GPS signal produced also comes with confidence level. 
 
 ## Installation Environment
 
-### 1. OS
-Install Ubuntu 14.04, Trusty
+### 1. Operating System
+Prefer Ubuntu 14.04, Trusty
 
-### 2. ROS
+### 2. Robot Operating System - ROS
 #### 2.1 About ROS
-ROS (Robot Operating System) provides libraries and tools to help software developers create robot applications. It provides hardware abstraction, device drivers, libraries, visualizers, message-passing, package management, and more. ROS is licensed under an open source, BSD license.
-#### 2.2 Install ROS
+ROS provides libraries and tools to help software developers create robot applications. It provides hardware abstraction, device drivers, libraries, visualizers, message-passing, package management, and more. ROS is licensed under an open source, BSD license.
+#### 2.2 Install ROS from
 http://wiki.ros.org/cn/indigo/Installation/Ubuntu
-#### 2.3 Learn More About ROS
+#### 2.3 Learn more about ROS from
 http://wiki.ros.org/ROS/Tutorials
-#### 2.4 Our Version
+#### 2.4 iMorpheus Perferred Version
 ROS Indigo
 
-### 3. PCL
+### 3. Point Cloud Library - PCL
 #### 3.1 About PCL
-The Point Cloud Library (PCL) is a standalone, large scale, open project for 2D/3D image and point cloud processing.
-#### 3.2 Install PCL
+PCL is a large scale, open source project for 2D/3D image and point cloud processing.
+#### 3.2 Install PCL from
 http://pointclouds.org/downloads/
-#### 3.3 Learn More About PCL
+#### 3.3 Learn more about PCL from
 http://pointclouds.org/documentation/
-#### 3.4 Our Version
+#### 3.4 iMorpheus Perferred Version
 pcl-1.7.0
 
 ### 4.EIGEN
 #### 4.1 About EIGEN
 Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.
-#### 4.2 Install EIGEN
+#### 4.2 Install EIGEN from
 http://eigen.tuxfamily.org/index.php?title=Main_Page
-#### 4.3 Learn More About EIGEN
+#### 4.3 Learn more about EIGEN from
 http://eigen.tuxfamily.org/index.php?title=Main_Page
-#### 4.4 Our Version
+#### 4.4 iMorpheus Perferred Version
 Eigen-3.3
 
 ## Module description
 ### 1. Modules
-This project has three modules: GPS, LOAM and Calibration.
+gpsCalibration has three modules include GPS, LOAM and Calibration.
 
 #### 1.1 GPS module
 This module processes GPS data and transforms them into local coordinate system.
