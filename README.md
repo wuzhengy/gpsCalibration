@@ -77,8 +77,8 @@ The final output is calibrated GPS track. We only work on 2D GPS tracks in this 
   sensor_msgs/PointCloud2. and GPS coordinates matched with your run trail although 
   GPS is not accurate and not continuous in time.
   If you don’t have lidar or GPS data, don’t worry, we have some data in advance for you to have a try.*
-* [point cloud data](http://www.imorpheus.ai/download/dataForDemo/bagDemo)
-* [GPS data](http://www.imorpheus.ai/download/dataForDemo/original_gps_data)
+* [small size demo data](http://www.imorpheus.ai/download/dataForDemo/smallSizeDemoData)
+* [large size demo data](http://www.imorpheus.ai/download/dataForDemo/largeSizeDemoData)
   
 2.*Open the globalConfig.py in directory "iMorpheusAI/"
   set needed file directory correctly.*
@@ -114,13 +114,13 @@ You can find Google Earth here: https://developers.google.com/kml/?hl=en-US.*
 
 ### 3. Example
 #### 3.1 data download
-* [point cloud data](http://www.imorpheus.ai/download/dataForDemo/bagDemo)
-* [GPS data](http://www.imorpheus.ai/download/dataForDemo/original_gps_data)
+* [small size demo data](http://www.imorpheus.ai/download/dataForDemo/smallSizeDemoData)
+* [large size demo data](http://www.imorpheus.ai/download/dataForDemo/largeSizeDemoData)
 
 #### 3.2 demo results
 ![image](https://github.com/iMorpheusAI/gpsCalibration/raw/master/demo/demo1.png)
 ![image](https://github.com/iMorpheusAI/gpsCalibration/raw/master/demo/demo2.png)
 ##### [See More](http://www.imorpheus.ai/demo/)
-
+##### [Results Download](http://www.imorpheus.ai/download/dataForDemo/largeSizeDemoResult)
 ## Questions
   You can ask any question [here](https://github.com/iMorpheusAI/gpsCalibration/issues) or send us [emails](product@imorpheus.ai).
