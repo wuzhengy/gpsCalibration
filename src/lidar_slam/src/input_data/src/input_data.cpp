@@ -21,6 +21,10 @@
 #include <errno.h>
 #include <cmath>
 #include <nav_msgs/Odometry.h>
+
+#include "iMorpheusAI/IMTrack.h"
+#include "iMorpheusAI/IMLocalXYZT.h"
+
 #define IMSDLEN 512
 #define foreach BOOST_FOREACH
 #define IMRATE 3.0
@@ -42,6 +46,7 @@ vector<sensor_msgs::PointCloud2> cloudTopics;
 nav_msgs::Odometry preOdometry;              //subscribe message
 rosbag::Bag readBag;       //read bag handler
 sensor_msgs::PointCloud2::ConstPtr pointcloud2;          //publish message
+iMorpheusAI::IMTrack slamTrack;
 
 struct DISTANCE
 {
@@ -69,6 +74,13 @@ void subOdometryHandler(const nav_msgs::Odometry::ConstPtr& subOdometry)
 {
     if(subOdometry->header.stamp.toSec()==pointcloud2->header.stamp.toSec())    //make sure publish message and receive odometry
     {
+        iMorpheusAI::IMLocalXYZT localCoor;
+        localCoor.localX = subOdometry->pose.pose.position.x;
+        localCoor.localY = subOdometry->pose.pose.position.y;
+        localCoor.localZ = subOdometry->pose.pose.position.z;
+        localCoor.timestamp = subOdometry->header.stamp.toSec();
+        slamTrack.track.push_back(localCoor);
+
         DISTANCE tmpdis;
         if(firstMessage == 1)    //first odomtry
         {
@@ -230,7 +242,8 @@ int main(int argc, char **argv)
     
     ros::NodeHandle nh;
     ros::Publisher pubLaserCloud = nh.advertise<sensor_msgs::PointCloud2>("/velodyne_points",1024);      // publish pointcloud message
-	
+	ros::Publisher slamTrackPub = nh.advertise<iMorpheusAI::IMTrack>("/slam_track",1024);
+
     pid_t child_pid = fork();    // fork child process,running loam
     if(child_pid == -1) {
         perror("fork error");
@@ -302,6 +315,9 @@ int main(int argc, char **argv)
                         ros::spinOnce();       //calculate track distance
                         if(totalDis > totalDistance)    // stop publish message
                         {
+                            slamTrackPub.publish(slamTrack);     // publish slam track
+                            slamTrack.track.clear();
+
                             totalDis = 0;
                             end = 1;
                             break;
