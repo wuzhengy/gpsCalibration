@@ -1,6 +1,18 @@
 #!/usr/bin/python3
-import os
 from subprocess import Popen
+
+'''
+    Ubuntu 14.04 Installation Environment
+
+        1. Robot Operating System
+        
+        2. Point Cloud Library
+
+        3. EIGEN
+
+        4. LibXML
+
+'''
 
 if __name__=="__main__":
         
