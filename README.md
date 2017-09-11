@@ -14,35 +14,27 @@ The alpha version is a software package operate under off-line mode and using po
 Prefer Ubuntu 14.04, Trusty
 
 ### 2. Robot Operating System - ROS
-#### 2.1 About ROS
 ROS provides libraries and tools to help software developers create robot applications. It provides hardware abstraction, device drivers, libraries, visualizers, message-passing, package management, and more. ROS is licensed under an open source, BSD license.
-#### 2.2 Install ROS from
-http://wiki.ros.org/cn/indigo/Installation/Ubuntu
-#### 2.3 Learn more about ROS from
-http://wiki.ros.org/ROS/Tutorials
-#### 2.4 iMorpheus Perferred Version
-ROS Indigo
+##### [Learn More](http://wiki.ros.org/ROS/Tutorials)
 
 ### 3. Point Cloud Library - PCL
-#### 3.1 About PCL
 PCL is a large scale, open source project for 2D/3D image and point cloud processing.
-#### 3.2 Install PCL from
-http://pointclouds.org/downloads/
-#### 3.3 Learn more about PCL from
-http://pointclouds.org/documentation/
-#### 3.4 iMorpheus Perferred Version
-pcl-1.7.0
+##### [Learn More](http://pointclouds.org/documentation/)
 
 ### 4.EIGEN
-#### 4.1 About EIGEN
 Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.
-#### 4.2 Install EIGEN from
-http://eigen.tuxfamily.org/index.php?title=Main_Page
-#### 4.3 Learn more about EIGEN from
-http://eigen.tuxfamily.org/index.php?title=Main_Page
-#### 4.4 iMorpheus Perferred Version
-Eigen-3.3
+##### [Learn More](http://eigen.tuxfamily.org/index.php?title=Main_Page)
 
+### 5.Quick Installation
+Two scripts are provided for users.<br/>
+###### Basic installation (Recommended for general users.) -> [install_mini.sh](https://github.com/iMorpheusAI/gpsCalibration/blob/develop/install/install_mini.sh)<br/>
+```c
+sudo ./install_mini.sh
+```
+###### Professional installation (Recommended for developers.) -> [install_full.sh](https://github.com/iMorpheusAI/gpsCalibration/blob/develop/install/install_full.sh)
+```c
+sudo ./install_full.sh
+```
 ## Module description
 ### 1. Modules
 gpsCalibration has three modules include GPS, LOAM and Calibration.
