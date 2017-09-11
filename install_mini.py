@@ -18,9 +18,12 @@ if __name__=="__main__":
         
     #ROS
     ROSSourceList= "sudo sh -c 'echo \"deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main\" > /etc/apt/sources.list.d/ros-latest.list';"
-
     pROSSourceList= Popen(ROSSourceList, shell= True)
     pROSSourceList.wait()
+
+    ROSSetKey= "sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116"
+    pROSSetKey= Popen(ROSSetKey, shell= True)
+    pROSSetKey.wait()
 
     ROSInstallUpdate= "sudo apt-get update;"
     pROSInstallUpdate= Popen(ROSInstallUpdate, shell= True)
@@ -51,17 +54,6 @@ if __name__=="__main__":
     pROSEnvironmentSetup.wait()
 
     print("ROS has been installed!")
-
-    #PCL
-    PCLSourceList= "sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl; sudo apt-get update;"
-    pPCLSourceList= Popen(PCLSourceList, shell=True)
-    pPCLSourceList.wait()
-
-    PCLInstall= "sudo apt-get install -y libpcl-all;"
-    pPCLInstall= Popen(PCLInstall, shell=True)
-    pPCLInstall.wait()
-
-    print("PCL has been installed!")
 
     #EIGEN
     EigenInstall= "sudo apt-get install -y libeigen3-dev; sudo ln /usr/include/eigen3/Eigen /usr/include/Eigen;"
