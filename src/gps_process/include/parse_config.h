@@ -24,7 +24,7 @@ int createKML(char *KMLFileName,vector<pair<double,double> > WGSBL,vector<double
 
     ofstream ofile;
     ofile.open(KMLFileName);
-    if(NULL==ofile)
+    if(!ofile)
     {
         printf("open %s error\n",KMLFileName);
         return 1;

@@ -1,1 +1,1 @@
-input your point cloud data bag filename path
+/home/shunli/code_struct_optimization/gpsCalibration/data/bag_3

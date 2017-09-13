@@ -27,7 +27,7 @@ int main(int argc,char **argv)
     /*open GPS csv*/
 	ifstream ifile;
 	ifile.open(GPSFileName);
-	if(NULL==ifile)
+	if(!ifile)
 	{
 		printf("open %s error\n",GPSFileName);
 		return 1;
