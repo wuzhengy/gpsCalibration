@@ -1,7 +1,8 @@
 # iMorpheus.ai - high availability sub-meter precise GPS
 Through algorithm fusion of multiple data sources from different sensors such as lidar, radar, camera, gps, imu and point cloud, iMorpheus.ai brings about an high availability precision GPS measurement to outdoor robotics developer. iMorpheus integrate a number of advanced algorithm such as slam, kalman filter, ICP, feature selection and Gaussian Process. 
 #### We believe precise GPS signal should obtained by computing from cloud rather than measure the satellite, and soly software and cloud can solve the problem rather than expensive hardware. So that we committed into only software to solve the problem. 
-
+![image](https://github.com/iMorpheusAI/gpsCalibration/raw/master/demo/demo1.png)
+![image](https://github.com/iMorpheusAI/gpsCalibration/raw/master/demo/demo2.png)
 ## Copyrights
 ![License](https://img.shields.io/badge/License-Apache2.0-blue.svg)
 
@@ -21,19 +22,18 @@ ROS provides libraries and tools to help software developers create robot applic
 PCL is a large scale, open source project for 2D/3D image and point cloud processing.
 ##### [Learn More](http://pointclouds.org/documentation/)
 
-### 4.EIGEN
+### 4. EIGEN
 Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms.
 ##### [Learn More](http://eigen.tuxfamily.org/index.php?title=Main_Page)
 
-### 5.Quick Installation
-Two scripts are provided for users.<br/>
-###### Basic installation (Recommended for general users.) -> [install_mini.sh](https://github.com/iMorpheusAI/gpsCalibration/blob/develop/install/install_mini.sh)<br/>
-```c
-sudo ./install_mini.sh
-```
-###### Professional installation (Recommended for developers.) -> [install_full.sh](https://github.com/iMorpheusAI/gpsCalibration/blob/develop/install/install_full.sh)
-```c
-sudo ./install_full.sh
+### 5. Quick Installation
+Two kinds of scripts are provided for users. 
+###### Basic installation-Basic version (Recommended for general users.) 
+###### Professional installation-Professional version (Recommended for developers.) 
+You can download this repertory and type commands:
+```shell
+cd install
+sudo ./install.sh-(selected by your ubuntu version and demand) 
 ```
 ## Module description
 ### 1. Modules
@@ -108,9 +108,8 @@ You can find Google Earth here: https://developers.google.com/kml/?hl=en-US.*
 ##### large size demo data -> [[download-2.6GB]](http://www.imorpheus.ai/download/dataForDemo/largeSizeDemoData)
 
 #### 3.2 demo results
-![image](https://github.com/iMorpheusAI/gpsCalibration/raw/master/demo/demo1.png)
-![image](https://github.com/iMorpheusAI/gpsCalibration/raw/master/demo/demo2.png)
-##### [See More](http://www.imorpheus.ai/demo/)
 ##### [Results Download](http://www.imorpheus.ai/download/dataForDemo/largeSizeDemoResult)
+##### [See More](http://www.imorpheus.ai/demo/)
+
 ## Questions
   You can ask any question [here](https://github.com/iMorpheusAI/gpsCalibration/issues) or send us [emails](product@imorpheus.ai).
