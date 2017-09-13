@@ -33,7 +33,7 @@ int inputData(string trackFilename, vector<trackCoord> &track)
 
     ifstream ifile;
     ifile.open(trackFilename.c_str());
-    if(NULL==ifile)
+    if(!ifile)
     {
         printf("open %s error\n", trackFilename.c_str());
         return 1;
@@ -88,7 +88,7 @@ int outputCoeData(string trackFilename, vector<float> &track)
 
     //open file    
     ofile.open(trackFilename.c_str());
-    if(NULL==ofile)
+    if(!ofile)
     {   
         printf("open %s error\n",trackFilename.c_str());
         return 1;

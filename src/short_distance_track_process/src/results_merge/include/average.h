@@ -33,7 +33,7 @@ void readOverLapPointBefore(vector<int> flag,vector<Point>& overlapBefore)
         int flagtemp=0;
     	sprintf(filename,"%s_%d",gpsCalibrationTrack,i+1);
         track.open(filename,fstream::in);
-        assert(track !=0 );
+        assert(track.is_open());
         while(getline(track,str))
         {   flagtemp++;
             if(flagtemp>=flag[i])
@@ -101,7 +101,7 @@ void readOverLapPointBehind(vector<int> overlap,vector<Point>& overlapBehind)
         int flagtemp=0;
     	sprintf(filename,"%s_%d",gpsCalibrationTrack,i);
         track.open(filename,fstream::in);
-        assert(track != 0);
+        assert(track.is_open());
         while(getline(track,str))
         {   flagtemp++;
             if(flagtemp<=overlap[i-2])
@@ -205,7 +205,7 @@ void calculateAverage(int flag, int startflag, int opNo, vector<Point> overlapBe
     char filename[IMLDLEN];
     sprintf(filename,"%s_%d",gpsCalibrationTrack,flag);
     temptrack.open(filename,fstream::in);
-    assert(temptrack != 0);
+    assert(temptrack.is_open());
     while(temptrack.getline(buf,IMLDLEN))
     {
         num++;
@@ -239,11 +239,11 @@ int mergeTrack(vector<int> flag,vector<int> overlap,vector<Point> overlapBefore,
     string tempfile(gpsCalibrationTrack);
     //cout<<mergeOverlapFile<<endl;
     mergestream.open(mergeOverlapFile.c_str(),fstream::out);
-    assert(mergestream != 0);
+    assert(mergestream.is_open());
 
     string firstfile=tempfile+"_1";
     track.open(firstfile.c_str(),fstream::in);
-    assert(track != 0);
+    assert(track.is_open());
     int Num=0;
     int startNo=0;
     char buf[IMLDLEN];

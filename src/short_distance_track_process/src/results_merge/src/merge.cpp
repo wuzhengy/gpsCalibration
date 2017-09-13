@@ -34,7 +34,7 @@ int main(int argc,char** argv)
         sprintf(ENUfileName,"%s_%d",gpsCalibrationTrack,i);
         track.open(ENUfileName,fstream::in);
         //std::cout<<"------------->"<<ENUfileName<<std::endl;
-        assert(track !=0 );
+        assert(track.is_open());
         while(getline(track,str))
         {
             haveread++;
@@ -65,7 +65,7 @@ int main(int argc,char** argv)
         int flagtemp=0;
         sprintf(ENUfileName,"%s_%d",gpsCalibrationTrack,i);
         track.open(ENUfileName,fstream::in);
-        assert(track !=0 );
+        assert(track.is_open());
         while(getline(track,str))
         {   
             flagtemp++;

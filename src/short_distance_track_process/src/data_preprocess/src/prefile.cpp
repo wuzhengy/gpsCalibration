@@ -25,15 +25,15 @@ int main(int argc,char** argv)
     char weightFileName[IMFILELEN];
     ofstream gpsTrackFile;
     gpsTrackFile.open(argv[3],std::fstream::out);
-    assert(gpsTrackFile !=0);
+    assert(gpsTrackFile.is_open());
     for(int i=1;i<=fileNo;++i)
     {
         sprintf(enuFilename,"%s%d",argv[1],i);
         ifstream enuFile(enuFilename,std::fstream::in);
-        assert(enuFilename !=0);
+        assert(enuFile.is_open());
         sprintf(weightFileName,"%s%d",argv[2],i);
         ifstream weightfile(weightFileName,std::fstream::in);
-        assert(weightFileName !=0);
+        assert(weightfile.is_open());
         ret=mergeFile(enuFile,weightfile,gpsTrackFile,lastTime,firstTime);
         profilelastTime=firstTime;
         if(i>1)

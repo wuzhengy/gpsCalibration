@@ -71,7 +71,7 @@ int devideIcp::callRegressICP(string & loamENUfile,string & gpsENUfile, string &
 void devideIcp::deleteCacheDir()
 {
     DIR* pdir=opendir(cacheDir.c_str());
-    assert(pdir != 0);
+    assert(pdir);
     struct dirent *dir;
     struct stat st;
     while(dir=readdir(pdir))

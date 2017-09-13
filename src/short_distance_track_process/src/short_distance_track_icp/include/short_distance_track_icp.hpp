@@ -29,7 +29,7 @@ void getLoamTrackPieceBeginAndEndTime(char* loamTrackPieceFile,TimeStruct & star
 
     // open loam track
     ifstream ifile(loamTrackPieceFile,std::ifstream::in);
-    assert(ifile != 0);
+    assert(ifile.is_open());
     while(ifile.getline(buf,IMSDLEN))
     {
         row++;
@@ -83,11 +83,11 @@ void getGPSAndWeight(char* globalICPGPSTrack,TimeStruct & startAndEnd,int pieceN
 
     ofstream outFileXYZ(gpsPieceTrack);
     ofstream outFileWeight(gpsPieceTrackWeight);
-    assert(outFileXYZ != 0);
-    assert(outFileWeight != 0);
+    assert(outFileXYZ.is_open());
+    assert(outFileWeight.is_open());
 
     ifstream ifile(globalICPGPSTrack,std::ifstream::in);
-    assert(ifile != 0);
+    assert(ifile.is_open());
   
     while(ifile.getline(buf,IMSDLEN))
     {
