@@ -12,7 +12,7 @@ The alpha version is a software package operate under off-line mode and using po
 ## Installation Environment
 
 ### 1. Operating System
-Prefer Ubuntu 14.04, Trusty
+Ubuntu 14.04, 16.04
 
 ### 2. Robot Operating System - ROS
 ROS provides libraries and tools to help software developers create robot applications. It provides hardware abstraction, device drivers, libraries, visualizers, message-passing, package management, and more. ROS is licensed under an open source, BSD license.
