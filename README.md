@@ -1,8 +1,7 @@
 # iMorpheus.ai - high availability sub-meter precise GPS
 Through algorithm fusion of multiple data sources from different sensors such as lidar, radar, camera, gps, imu and point cloud, iMorpheus.ai brings about an high availability precision GPS measurement to outdoor robotics developer. iMorpheus integrate a number of advanced algorithm such as slam, kalman filter, ICP, feature selection and Gaussian Process. 
 #### We believe precise GPS signal should obtained by computing from cloud rather than measure the satellite, and soly software and cloud can solve the problem rather than expensive hardware. So that we committed into only software to solve the problem. 
-![image](https://github.com/iMorpheusAI/gpsCalibration/raw/master/demo/demo1.png)
-![image](https://github.com/iMorpheusAI/gpsCalibration/raw/master/demo/demo2.png)
+![image](https://github.com/iMorpheusAI/gpsCalibration/raw/master/demo/demo.gif)
 ## Copyrights
 ![License](https://img.shields.io/badge/License-Apache2.0-blue.svg)
 
