@@ -20,8 +20,12 @@ function requests document
     
         If you are an engineer, we recommend that you ues professional version.
 
-    2.3 Preprocess of point cloud data
+    2.3 Update to ROS package
 
-    2.4 Calibration of lidar, IMU and GPS
+        Data flow and calculation nodes in alpha version are controlled by python script, which will be updated to a package in ROS.
 
-    2.5 SLAM methods in different scenes
+    2.4 Preprocess of point cloud data
+
+    2.5 Calibration of lidar, IMU and GPS
+
+    2.6 SLAM methods in different scenes
